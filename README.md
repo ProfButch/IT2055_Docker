@@ -56,7 +56,7 @@ This Jupyter setup requires a token to log into the server that is running.  Thi
  # Install Packages for Anaconda
  If you need to install packages on your Anaconda server (which you will need to do for class), you must do so on the Anaconda server.  You can use the Terminal in the Docker Dashboard to get access to the server and run your various installs.
 
- INSERT IMAGE HERE
+<img width="1294" alt="Screenshot 2023-05-09 at 4 33 49 PM" src="https://github.com/ProfButch/IT2055_Docker/assets/109557520/fae409a2-a690-4427-a2a2-1996ddb0e040">
 
 
 # Where are my notebooks and other such files?
