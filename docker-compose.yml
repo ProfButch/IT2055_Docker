@@ -1,0 +1,26 @@
+version: '1'
+name: 'it2055-mongo-conda'
+
+services:
+  mongo:
+    container_name: 'mongo-it2055'
+    image: mongo:latest
+    ports:
+      - 27017:27017
+    volumes:
+      - './volumes/mongo/data/configdb:/data/configdb'
+      - './volumes/mongo/data/db:/data/db'
+
+
+  anaconda:
+    container_name: 'anaconda-it2055'
+    image: continuumio/anaconda3:latest
+    ports:
+      - 8888:8888
+    command: bash -c "conda install jupyter -y --quiet && mkdir -p /opt/notebooks && jupyter notebook  --notebook-dir=/opt/notebooks --ip='*' --port=8888 --no-browser --allow-root && jupyter notebook list"
+    volumes:
+      - './volumes/jupyter/notebooks:/opt/notebooks'
+    environment:
+      # since we are in a container, we do not need to worry about the root
+      # warning that pip generates.  It's fine to run things as root here.
+      PIP_ROOT_USER_ACTION: ignore
