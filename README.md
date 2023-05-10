@@ -11,10 +11,26 @@ To use this docker setup:
 * open up a command prompt/terminal window ad `cd` into this directory.
 * type `docker compose create`.  You should see the following output:
 ```
+➜  IT2055_Docker-main docker compose create
+[+] Running 13/13
+ ✔ mongo 9 layers [⣿⣿⣿⣿⣿⣿⣿⣿⣿]      0B/0B      Pulled                                       32.8s
+   ✔ f3f60f415e9a Pull complete                                                             2.0s
+   ✔ 42c1bc6eb929 Pull complete                                                             2.0s
+   ✔ b5af31693439 Pull complete                                                             2.2s
+   ✔ 23f5afa97a66 Pull complete                                                             2.3s
+   ✔ d05f20747b83 Pull complete                                                             2.4s
+   ✔ ab5a4df6de08 Pull complete                                                             2.4s
+   ✔ bee7bab4fd17 Pull complete                                                             2.5s
+   ✔ 49156abc6ec2 Pull complete                                                            31.4s
+   ✔ ddead51c266b Pull complete                                                            31.5s
+ ✔ anaconda 2 layers [⣿⣿]      0B/0B      Pulled                                           43.6s
+   ✔ ebc3dc5a2d72 Pull complete                                                             6.0s
+   ✔ f0855f5a21c9 Pull complete                                                            42.3s
 [+] Running 3/3
- ✔ Network it2055-mongo-conda_default  Created           0.0s
- ✔ Container mongo-it2055              Created           0.1s
- ✔ Container anaconda-it2055           Created           0.0s
+ ✔ Network it2055-mongo-conda_default  Created                                              0.0s
+ ✔ Container anaconda-it2055           Created                                              0.4s
+ ✔ Container mongo-it2055              Created                                              0.5s
+➜  IT2055_Docker-main
  ```
  * In the Docker Dashboard, click "Containers".  You should see `it2055-mongo-conda`.
  * Click the play button to start the mongodb server and Anaconda server.
